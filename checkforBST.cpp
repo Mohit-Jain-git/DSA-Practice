@@ -17,9 +17,9 @@ bool isBST(node *root, node *min, node *max)
   if (root == NULL)
     return true;
   if (min != NULL && root->data <= min->data)
-    return true;
+    return false;
   if (max != NULL && root->data >= max->data)
-    return true;
+    return false;
   bool leftValid = isBST(root->left, min, root);
   bool rightValid = isBST(root->right, root, max);
   return leftValid and rightValid;
