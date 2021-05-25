@@ -44,12 +44,13 @@ info largestBST(node *root)
 }
 int main()
 { 
-    node *root = new node(5);
-    root->left = new node(3);
-    root->right = new node(6);
-    root->left->left = new node(5);
-    root->left->right = new node(4);
-    cout<<"Largest BST in BT : "<<largestBST(root).size<<endl;
+    node *root = new node(4);
+    root->left = new node(2);
+    root->right = new node(5);
+    root->left->left = new node(1);
+    root->left->right = new node(3);
+    root->right->right = new node(6);
+    cout<<"Largest BST in BT : "<<largestBST(root).ans<<endl;
     return 0;
 
 }
