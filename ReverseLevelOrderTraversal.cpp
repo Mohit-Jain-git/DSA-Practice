@@ -12,25 +12,26 @@ struct node
     right = NULL;
   }
 };
-void printLevelOrder(node *root)
+void reverseprintLevelOrder(node *root)
 {
-  if (root == NULL)
+    if(root==NULL)
     return;
-  queue<node *> q;
-  q.push(root);
-  // q.push(NULL);
-  while (q.empty() != 1)
-  {
-    node *Node = q.front();
-    q.pop();
-      cout << Node->data << " ";
-      if (Node->left)
-        q.push(Node->left);
-      if (Node->right)
-        q.push(Node->right);
-     }
-    // else if (q.empty() != 1)
-      // q.push(NULL);
+    vector<int> ans;
+    queue<node*> q;
+    q.push(root);
+    while(q.empty()!=1)
+    { 
+       node *s= q.front();
+       ans.push_back(s->data);
+       q.pop();
+       if(s->right)
+       q.push(s->right);
+       if(s->left)
+       q.push(s->left);
+    }
+     reverse(ans.begin(),ans.end());
+     for(int i=0;i<ans.size();i++)
+     cout<<ans[i]<<" ";
 }
 int main()
 { 
@@ -41,7 +42,6 @@ int main()
   root->left->right = new node(5);
   root->right->left = new node(6);
   root->right->right = new node(7);
-  printLevelOrder(root);
-
+  reverseprintLevelOrder(root);
   return 0;
 }
