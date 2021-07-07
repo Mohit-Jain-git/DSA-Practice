@@ -1,3 +1,5 @@
+// Array should be sorted in Binary Search.
+
 #include <bits/stdc++.h>
 using namespace std;
 int BinarySearch(int a[], int n, int key)
