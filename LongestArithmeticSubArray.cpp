@@ -1,3 +1,4 @@
+// Longest Arithmetic Subarray is an array in which diff. of consecutive elements is same and contains atleast two integers.
 #include <bits/stdc++.h>
 using namespace std;
 int main()
