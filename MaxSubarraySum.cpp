@@ -9,13 +9,20 @@ int main()
   {
     cin >> a[i];
   }
+  // for (int i = 0; i < n; i++)
+  // {
+  //   sum = 0;
+  //   for (int j = i; j < n; j++)
+  //   {
+  //     sum += a[j];
+  //   }
+  //   mx = max(mx, sum);
+  // }
   for (int i = 0; i < n; i++)
   {
-    sum = 0;
-    for (int j = i; j < n; j++)
-    {
-      sum += a[j];
-    }
+    sum = sum + a[i];
+    if (sum < 0)
+      sum = 0;
     mx = max(mx, sum);
   }
   cout << mx << endl;
