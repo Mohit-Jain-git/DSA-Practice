@@ -21,7 +21,7 @@ int main()
     if (a[i] >= 0)
     {
       idx[a[i]] = 1;
-    }
+    } 
   }
   for (int i = 0; i < N; i++)
   {
