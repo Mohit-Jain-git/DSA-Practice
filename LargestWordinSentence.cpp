@@ -22,4 +22,5 @@ int main()
       break;
   }
   cout << mx << endl;
+  return 0;
 }
