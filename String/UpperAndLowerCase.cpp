@@ -14,12 +14,20 @@ int main()
 
   // convert to lower case
 
-  string s = "MOHIT";
-  for (int i = 0; i < s.size(); i++)
-  {
-    if (s[i] >= 'A' && s[i] <= 'Z')
-      s[i] = s[i] + 32;
-  }
-  cout << s;
+  // string s = "MOHIT";
+  // for (int i = 0; i < s.size(); i++)
+  // {
+  //   if (s[i] >= 'A' && s[i] <= 'Z')
+  //     s[i] = s[i] + 32;
+  // }
+  // cout << s;
+
+  // OR
+
+  string s = "sdnflenrfekrnr";
+  transform(s.begin(), s.end(), s.begin(), ::toupper);
+  cout << s << endl;
+  transform(s.begin(), s.end(), s.begin(), ::tolower);
+  cout << s << endl;
   return 0;
 }
